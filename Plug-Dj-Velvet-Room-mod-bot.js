@@ -73,7 +73,7 @@
       {
         interval: 10,
         offset: 0,
-        msg: "This is your resident Velvet Room Attendant reminding you to come meet our other guests and join our Facebook group: /fb"
+        msg: "/em This is your resident Velvet Room Attendant reminding you to come meet our other guests and join our Facebook group: https://www.facebook.com/TheVelvetRoomLobby"
       }
     ];
 
@@ -742,13 +742,13 @@
       ramen = this.randomRamen();
       if (msg.substring(5, 6) === "@") {
         ramenName = msg.substring(6);
-        if (tacoName === '#The Fox') {
+        if (ramenName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {
           return API.sendChat("Yo @" + ramenName + ", " + this.msgData.from + " just gave you " + ramen + "!");
         }
       } else {
-        return API.sendChat("Yo @" + this.msgData.from + ", here is " + ramen + "!");
+        return API.sendChat("Yo @" + this.msgData.from + ", here is your " + ramen + "!");
       }
     };
 
@@ -783,13 +783,13 @@
       steak = this.randomSteak();
       if (msg.substring(5, 6) === "@") {
         steakName = msg.substring(6);
-        if (steakName === '#Koromaru') {
+        if (steakName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {
           return API.sendChat("Yo @" + steakName + ", " + this.msgData.from + " just gave you " + steak + "!");
         }
       } else {
-        return API.sendChat("Yo @" + this.msgData.from + ", here is " + steak + "!");
+        return API.sendChat("Yo @" + this.msgData.from + ", here is your " + steak + "!");
       }
     };
 
@@ -808,7 +808,7 @@
     cookieCommand.prototype.init = function() {
       this.command = '/cookie';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'user';
     };
 
     cookieCommand.prototype.getCookie = function() {
@@ -846,7 +846,7 @@
     }
 
     punishCommand.prototype.init = function() {
-      this.command = 'punish';
+      this.command = '/punish';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'mod';
     };

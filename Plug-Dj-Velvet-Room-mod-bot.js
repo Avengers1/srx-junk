@@ -724,7 +724,7 @@
     }
 
     ramenCommand.prototype.init = function() {
-      this.command = '/ramen';
+      this.command = 'ramen';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'user';
     };
@@ -765,7 +765,7 @@
     }
 
     steakCommand.prototype.init = function() {
-      this.command = '/steak';
+      this.command = 'steak';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'user';
     };
@@ -806,7 +806,7 @@
     }
 
     cookieCommand.prototype.init = function() {
-      this.command = '/cookie';
+      this.command = 'cookie';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'user';
     };
@@ -846,7 +846,7 @@
     }
 
     punishCommand.prototype.init = function() {
-      this.command = '/punish';
+      this.command = 'punish';
       this.parseType = 'startsWith';
       return this.rankPrivelege = 'mod';
     };

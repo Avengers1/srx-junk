@@ -362,7 +362,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat("Enter Velvet Room Attendant!");
+    return API.sendChat("Bot Online!");
   };
 
   populateUserData = function() {
@@ -552,13 +552,13 @@
             resp = "er... thats... not a command... please";
             break;
           case "steak":
-            resp = "order a yummy steak.  simply say 'ramen' or give on to someone else by saying 'steak @user'";
+            resp = "order a juicy steak.  simply say 'ramen' or give on to someone else by saying 'steak @user'";
             break;
           case "ramen":
             resp = "order some yummy ramen.  simply say 'ramen' or give on to someone else by saying 'ramen @user'";
             break;
           case "cookie":
-            resp = "Mod only command.  Reward a user with a sweet treat!  Syntax: cookie @user";
+            resp = "Reward a user with a sweet treat!  Syntax: cookie @user";
             break;
           case "punish":
             resp = "Mod only command.  Punish a user in one of several methods.  For naughty users.  Syntax: punish @user";
@@ -731,9 +731,9 @@
 
     ramenCommand.prototype.randomRamen = function() {
       var r, ramens;
-      ramens = ["a Hagakure bowl", "the Rainy Day Special Mega Beef Bowl from Aiya! Chinese Diner. Enter the portal to the meat dimension", "Mystery Food X! *vomits*"];
+      ramens = ["a pork and soy sauce bowl from Hagakure Ramen. The collagen will make your skin beautiful", "a steak bowl from Chinese Diner Aiya. You won't leave with an empty stomach", "Hagakure Ramen's signature, Hagakure Bowl. Best bowl of ramen in Iwatodai", "the Rainy Day Megag Beef Bowl Special from Chinese Diner Aiya. You entered the portal to the meat dimension", "the ramen that Yukari burnt and tried to serve Koromaru. Needless to say, you refused it as well", "a tofu bowl that Rise made, but it's so spicy that it feel like a volcano in your mouth", "an omelette Yukiko made, but it's completely tasteless", "Mystery Food X! *vomits*"];
       r = Math.floor(Math.random() * ramens.length);
-      return ramens[r];
+      return ramen[r];
     };
 
     ramenCommand.prototype.functionality = function() {
@@ -748,7 +748,7 @@
           return API.sendChat("Yo @" + ramenName + ", " + this.msgData.from + " just gave you " + ramen + "!");
         }
       } else {
-        return API.sendChat("Yo @" + this.msgData.from + ", here is your " + ramen + "!");
+        return API.sendChat("Yo @" + this.msgData.from + ", here is " + ramen + "!");
       }
     };
 
@@ -772,7 +772,7 @@
 
     steakCommand.prototype.randomSteak = function() {
       var r, steaks;
-      steaks = ["some steak croquettes from Souzai Daigoku. Nice and juicy", "a beef steak dinner from Junes. Dry and tough...", "a Fsteak?", "Mystery Food X! *vomits*"];
+      steaks = ["some steak croquettes from Souzai Daigoku. Nice and juicy", "a beef steak dinner from Junes. Dry and tough...", "a Fsteak?", "a failed attempt by Chie to make her own steaks. Looks like charcoal", "a Prodigy Platter from Wakatsu Restaurant. Get smarter while you digest", "a Wild-Duck Burger. This is so fattening", "the feast that Shinjiro made for the rest of SEES. You just entered the portal to the delicious dimension", "Mystery Food X! *vomits*"];
       r = Math.floor(Math.random() * steaks.length);
       return steaks[r];
     };
@@ -789,7 +789,7 @@
           return API.sendChat("Yo @" + steakName + ", " + this.msgData.from + " just gave you " + steak + "!");
         }
       } else {
-        return API.sendChat("Yo @" + this.msgData.from + ", here is your " + steak + "!");
+        return API.sendChat("Yo @" + this.msgData.from + ", here is " + steak + "!");
       }
     };
 
@@ -853,7 +853,7 @@
 
     punishCommand.prototype.getPunishment = function(username) {
       var p, punishment, punishments;
-      punishments = ["/me summons Mara up @{victim}'s ass", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru Kirijo to execute @{victim}", "/me sends Shadow Kanji's goons to violate @{victim}", "/me has Shadow Naoto alter @{victim}'s body", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to fire a Megidolaon at @{victim}"];
+      punishments = ["/me summons Mara up @{victim}'s ass", "/me summons Daisoujou and Alice to cast Samsara and Die For Me at @{victim}", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru Kirijo to execute @{victim}", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to cast a Megidolaon at @{victim}", "/me summons Helel and Satan to cast a Armageddon at @{victim}"];
       p = Math.floor(Math.random() * punishments.length);
       punishment = punishments[p].replace('{victim}', username);
       return punishment;
@@ -1038,14 +1038,12 @@
     };
 
     roomHelpCommand.prototype.functionality = function() {
-      var msg1, msg2;
-      msg1 = "Welcome to the Dubstep Den! Create a playlist and populate it with songs from either YouTube or Soundcloud.  ";
-      msg1 += "Click the 'Join Waitlist' button and wait your turn to play music. Most electronic music allowed, type '/theme' for specifics.";
-      msg2 = "Stay active while waiting to play your song or I'll remove you.  Play good quality music that hasn't been played recently (check room history).  ";
-      msg2 += "Avoid over played artists like Skrillex. Ask a mod if you're unsure about your song choice";
+      var msg1;
+      msg1 = "Welcome to the Velvet Room! Come and enjoy the music from the Persona series as well as the Shin Megami Tensei series.  ";
+      msg1 += "If there's a SMT track you want to listen to, please request it with an @Mention to the DJ.";
       API.sendChat(msg1);
       return setTimeout((function() {
-        return API.sendChat(msg2);
+        return API.sendChat(msg1);
       }), 750);
     };
 
@@ -1093,7 +1091,7 @@
 
     wootCommand.prototype.functionality = function() {
       var msg, nameIndex;
-      msg = "Please WOOT on DJ Booth and support your fellow DJs! AutoWoot: http://bit.ly/Lwcis0";
+      msg = "Please WOOT on DJ Booth and support your fellow DJs! AutoWoot: https://github.com/connergdavis/Plugbot";
       if ((nameIndex = this.msgData.message.indexOf('@')) !== -1) {
         return API.sendChat(this.msgData.message.substr(nameIndex) + ', ' + msg);
       } else {
@@ -1364,7 +1362,7 @@
     };
 
     lockCommand.prototype.functionality = function() {
-      API.sendChat('locks up the Velvet Booth');
+      API.sendChat(' gives everyone a Velvet Key');
       return data.lockBooth();
     };
 
@@ -1387,7 +1385,7 @@
     };
 
     unlockCommand.prototype.functionality = function() {
-      API.sendChat('You\'ll never get the key to unlock my heart');
+      API.sendChat(' summons back all the Velvet Keys');
       return data.unlockBooth();
     };
 
@@ -2012,7 +2010,7 @@
   beggar = function(chat) {
     var msg, r, responses;
     msg = chat.message.toLowerCase();
-    responses = ["Good idea @{beggar}!  Don't earn your fans or anything thats so yesterday", "Guys @{beggar} asked us to fan him!  Lets all totally do it! *fires off Yukiko's fans*", "srsly @{beggar}? ಠ_ಠ", "@{beggar}.  Earning his fans the good old fashioned way.  Hard work and elbow grease.  A true american."];
+    responses = ["Good idea @{beggar}!  Don't earn your fans or anything thats so yesterday", "Guys @{beggar} asked us to fan him!  Lets all totally do it! *fires off Yukiko's fans*", "srsly @{beggar}? à² _à² ", "@{beggar}.  Earning his fans the good old fashioned way.  Hard work and elbow grease.  A true american."];
     r = Math.floor(Math.random() * responses.length);
     if (msg.indexOf('fan me') !== -1 || msg.indexOf('fan for fan') !== -1 || msg.indexOf('fan pls') !== -1 || msg.indexOf('fan4fan') !== -1 || msg.indexOf('add me to fan') !== -1) {
       return API.sendChat(responses[r].replace("{beggar}", chat.from));

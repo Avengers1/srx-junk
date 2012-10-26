@@ -783,13 +783,11 @@
       steak = this.randomSteak();
       if (msg.substring(5, 6) === "@") {
         steakName = msg.substring(6);
-        if (steakName === '#Wolf Pup') {
-          return API.sendChat("No thanks I'll get fat :(");
-        } else {
+        if (steakName === 'msg.substring(6)') {
           return API.sendChat("Yo @" + steakName + ", " + this.msgData.from + " just gave you a " + steak + "!");
+        } else {
+          return API.sendChat("Yo @" + this.msgData.from + ", here is your " + steak + "!");
         }
-      } else {
-        return API.sendChat("Yo @" + this.msgData.from + ", here is your " + steak + "!");
       }
     };
 

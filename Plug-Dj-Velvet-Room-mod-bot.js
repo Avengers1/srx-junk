@@ -1147,7 +1147,7 @@
       e = encodeURIComponent;
       eAuthor = e(data.currentsong.author);
       eTitle = e(data.currentsong.title);
-      msg = "Want to buy Crimzen's music? Go to this site: http://sleepingawake.bandcamp.com/";
+      msg = "Want to get Crimzen's music? Go to this site: http://sleepingawake.bandcamp.com/";
       return API.sendChat(msg);
     };
 

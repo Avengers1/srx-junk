@@ -552,7 +552,7 @@
             resp = "er... thats... not a command... please";
             break;
           case "steak":
-            resp = "order a juicy steak.  simply say 'ramen' or give on to someone else by saying 'steak @user'";
+            resp = "order a juicy steak.  simply say 'steak' or give on to someone else by saying 'steak @user'";
             break;
           case "ramen":
             resp = "order some yummy ramen.  simply say 'ramen' or give on to someone else by saying 'ramen @user'";
@@ -742,7 +742,7 @@
         if (ramenName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {
-          return API.sendChat("Yo @" + ramenName + ", " + this.msgData.from + " just gave you " + ramen + "!");
+          return API.sendChat("Yo @" + ramenName + ", @" + this.msgData.from + " just gave you " + ramen + "!");
         }
       } else {
         return API.sendChat("Yo @" + this.msgData.from + ", here is " + ramen + "!");
@@ -783,7 +783,7 @@
         if (steakName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {
-          return API.sendChat("Yo @" + steakName + ", " + this.msgData.from + " just gave you " + steak + "!");
+          return API.sendChat("Yo @" + steakName + ", @" + this.msgData.from + " just gave you " + steak + "!");
         }
       } else {
         return API.sendChat("Yo @" + this.msgData.from + ", here is " + steak + "!");

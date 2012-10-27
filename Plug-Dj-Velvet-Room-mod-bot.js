@@ -741,7 +741,7 @@
       msg = this.msgData.message;
       ramen = this.randomRamen();
       if (msg.substring(6, 7) === "@") {
-        ramenName = msg.substring(6);
+        ramenName = msg.substring(7);
         if (ramenName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {
@@ -782,7 +782,7 @@
       msg = this.msgData.message;
       steak = this.randomSteak();
       if (msg.substring(6, 7) === "@") {
-        steakName = msg.substring(6);
+        steakName = msg.substring(7);
         if (steakName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {

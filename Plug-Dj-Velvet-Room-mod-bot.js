@@ -1067,7 +1067,8 @@
 
     sourceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Backus wrote me in CoffeeScript.  A generalized version of me should be available on github soon!';
+    msg = 'Backus from the Dubstep Den wrote me in CoffeeScript and had graciously allowed us to modify and use it. ';
+    msg += 'To support him and find the source code, go to this site: https://github.com/backus/Plug.DJ-Javascript-Chatbot';
       return API.sendChat(msg);
     };
 

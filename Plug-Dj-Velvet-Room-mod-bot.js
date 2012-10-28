@@ -552,28 +552,28 @@
             resp = "er... thats... not a command... please";
             break;
           case "steak":
-            resp = "order a juicy steak.  simply say 'steak' or give on to someone else by saying 'steak @user'";
+            resp = "order a juicy steak. simply say 'ramen' or give on to someone else by saying 'steak @user'";
             break;
           case "ramen":
-            resp = "order some yummy ramen.  simply say 'ramen' or give on to someone else by saying 'ramen @user'";
+            resp = "order some yummy ramen. simply say 'ramen' or give on to someone else by saying 'ramen @user'";
             break;
           case "cookie":
-            resp = "Reward a user with a sweet treat!  Syntax: cookie @user";
+            resp = "Reward a user with a sweet treat! Syntax: cookie @user";
             break;
           case "punish":
-            resp = "Mod only command.  Punish a user in one of several methods.  For naughty users.  Syntax: punish @user";
+            resp = "Mod only command. Punish a user in one of several methods. For naughty users. Syntax: punish @user";
             break;
           case "/newsongs":
             resp = "find new songs by checking out one of 40+ dubstep channels that post new music daily";
             break;
           case "/whywoot":
-            resp = "DJ all day without throwing your life away clicking woot every 3 minutes.  Learn how and get the necessary tools";
+            resp = "DJ all day without throwing your life away clicking woot every 3 minutes. Learn how and get the necessary tools";
             break;
           case "/theme":
-            resp = "Learn what genres of music are generally accepted here.  Don't forget to check if your song is in /overplayed though";
+            resp = "Learn what genres of music are generally accepted here. Don't forget to check if your song is in /overplayed though";
             break;
           case "/rules":
-            resp = "Room rules.  Duh";
+            resp = "Room rules. Duh";
             break;
           case "/roomhelp":
             resp = "Information about the room for the newer folk.";
@@ -588,7 +588,7 @@
             resp = "About the bot and the code that produced it";
             break;
           case "/woot":
-            resp = "Remind users to hit woot so they don't get removed.  either type /woot or /woot @user";
+            resp = "Remind users to hit woot so they don't get removed. either type /woot or /woot @user";
             break;
           case ".128":
             resp = "Mod only command. Flags songs that are bad quality.";
@@ -621,13 +621,13 @@
             resp = "Uptime and total song stats";
             break;
           case "/unhook events all":
-            resp = "Host only command.  It's complicated";
+            resp = "Host only command. It's complicated";
             break;
           case "/die":
-            resp = "Mod only command. Makes bot go bye bye";
+            resp = "Host only command. Makes bot go bye bye";
             break;
           case "/reload":
-            resp = "Mod only command. Reload pup's script";
+            resp = "Host only command. Reload pup's script";
             break;
           case "/lock":
             resp = "Mod only command. Locks booth";
@@ -642,46 +642,49 @@
             resp = "Explains to users why they should be mehing every song";
             break;
           case "/skip":
-            resp = "Mod only command.  Skips song.  Works for skipping invisible DJs.";
+            resp = "Mod only command. Skips song. Works for skipping invisible DJs.";
             break;
           case "/commands":
-            resp = "Lists all commands.  Will only list commands available to caller's user class (user, mod, or host)";
+            resp = "Lists all commands. Will only list commands available to caller's user class (user, mod, or host)";
             break;
           case "/resetafk":
-            resp = "Mod only command.  Resets AFK timer for user.  Syntax: /resetafk @USER";
+            resp = "Mod only command. Resets AFK timer for user. Syntax: /resetafk @USER";
             break;
           case "/forceskip":
-            resp = "Host only command.  Make pup skip songs when they are supposed to end (addresses triangles of death issue). Syntax: /forceskip [enable|disable]";
+            resp = "Host only command. Make pup skip songs when they are supposed to end (addresses triangles of death issue). Syntax: /forceskip [enable|disable]";
             break;
           case "/fb":
             resp = "Links to The Velvet Room facebook page";
             break;
+          case "/uservoice":
+            resp = "Links to The Velvet Room's uservoice page";
+            break;
           case "/dclookup":
-            resp = "Mod only command.  Looks up user for a log of their last disconnect. Syntax: /dclookup @USER";
+            resp = "Mod only command. Looks up user for a log of their last disconnect. Syntax: /dclookup @USER";
             break;
           case "/reminder":
-            resp = "Mod only command.  Set reminder for x songs from now.  For users that dc'd mainly.  Syntax: /reminder \"MSG\" [numsongs]";
+            resp = "Mod only command. Set reminder for x songs from now. For users that dc'd mainly. Syntax: /reminder \"MSG\" [numsongs]";
             break;
           case "/voteratio":
-            resp = "Mod only command.  See woot & meh count for user since bot launch.  Syntax: /voteratio @USER";
+            resp = "Mod only command. See woot & meh count for user since bot launch. Syntax: /voteratio @USER";
             break;
           case "/avgvoteratio":
-            resp = "Mod only command.  See average voting ratio of every present user in room. Syntax: /avgvoteratio";
+            resp = "Mod only command. See average voting ratio of every present user in room. Syntax: /avgvoteratio";
             break;
           case "/cmdhelp":
             resp = "Looks like you got it down";
             break;
           case "/pop":
-            resp = "Mod only command.  Removes last person on deck";
+            resp = "Mod only command. Removes last person on deck";
             break;
           case "/push":
-            resp = "Mod only command.  Puts user on deck. Syntax: /push @user";
+            resp = "Mod only command. Puts user on deck. Syntax: /push @user";
             break;
           default:
-            resp = "That is nothing.  That is not a thing.";
+            resp = "That is nothing. That is not a thing.";
         }
       } else {
-        resp = "Use this command to learn how use other commands.  Syntax: /cmdhelp [/CMD]";
+        resp = "Use this command to learn how use other commands. Syntax: /cmdhelp [/CMD]";
       }
       return API.sendChat(resp);
     };
@@ -728,9 +731,9 @@
 
     ramenCommand.prototype.randomRamen = function() {
       var r, ramens;
-      ramens = ["a pork and soy sauce bowl from Hagakure Ramen. The collagen will make your skin beautiful", "a steak bowl from Chinese Diner Aiya. You won't leave with an empty stomach", "Hagakure Ramen's signature, Hagakure Bowl. Best bowl of ramen in Iwatodai", "the Rainy Day Megag Beef Bowl Special from Chinese Diner Aiya. You entered the portal to the meat dimension", "the ramen that Yukari burnt and tried to serve Koromaru. Needless to say, you refused it as well", "a tofu bowl that Rise made, but it's so spicy that it feel like a volcano in your mouth", "an omelette Yukiko made, but it's completely tasteless", "Mystery Food X! *vomits*"];
+      ramens = ["a pork and soy sauce bowl from Hagakure Ramen. The collagen will make your skin beautiful", "a steak bowl from Chinese Diner Aiya. You won't leave with an empty stomach", "Hagakure Ramen's signature, Hagakure Bowl. Best bowl of ramen in Iwatodai", "the Rainy Day Mega Beef Bowl Special from Chinese Diner Aiya. You entered the portal to the meat dimension", "the ramen that Yukari burnt and tried to serve Koromaru. Needless to say, you refused it as well", "a tofu bowl that Rise made, but it's so spicy that it feel like a volcano in your mouth", "an omelette Yukiko made, but it's completely tasteless", "Mystery Food X! *vomits*"];
       r = Math.floor(Math.random() * ramens.length);
-      return ramen[r];
+      return ramens[r];
     };
 
     ramenCommand.prototype.functionality = function() {
@@ -742,7 +745,7 @@
         if (ramenName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {
-          return API.sendChat("Yo @" + ramenName + ", @" + this.msgData.from + " just gave you " + ramen + "!");
+          return API.sendChat("Yo @" + ramenName + ", " + this.msgData.from + " just gave you " + ramen + "!");
         }
       } else {
         return API.sendChat("Yo @" + this.msgData.from + ", here is " + ramen + "!");
@@ -783,7 +786,7 @@
         if (steakName === '#Wolf Pup') {
           return API.sendChat("No thanks I'll get fat :(");
         } else {
-          return API.sendChat("Yo @" + steakName + ", @" + this.msgData.from + " just gave you " + steak + "!");
+          return API.sendChat("Yo @" + steakName + ", " + this.msgData.from + " just gave you " + steak + "!");
         }
       } else {
         return API.sendChat("Yo @" + this.msgData.from + ", here is " + steak + "!");
@@ -1036,7 +1039,7 @@
 
     roomHelpCommand.prototype.functionality = function() {
       var msg1;
-      msg1 = "Welcome to the Velvet Room! Come and enjoy the music from the Persona series as well as the Shin Megami Tensei series.  ";
+      msg1 = "Welcome to the Velvet Room! Come and enjoy the music from the Persona series as well as the Shin Megami Tensei series. ";
       msg1 += "If there's a SMT track you want to listen to, please request it with an @Mention to the DJ.";
       API.sendChat(msg1);
       return setTimeout((function() {
@@ -1064,8 +1067,8 @@
 
     sourceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Backus from the Dubstep Den wrote me in CoffeeScript and had graciously allowed us to modify and use it. ';
-      msg += 'To support him and find the source code, go to this site: https://github.com/backus/Plug.DJ-Javascript-Chatbot';
+    msg = 'Backus from the Dubstep Den wrote me in CoffeeScript and had graciously allowed us to modify and use it. ';
+    msg += 'To support him and find the source code, go to this site: https://github.com/backus/Plug.DJ-Javascript-Chatbot';
       return API.sendChat(msg);
     };
 
@@ -1144,9 +1147,7 @@
       e = encodeURIComponent;
       eAuthor = e(data.currentsong.author);
       eTitle = e(data.currentsong.title);
-      msg = "Try this link for HIGH QUALITY DOWNLOAD: http://google.com/#hl=en&q=";
-      msg += eAuthor + "%20-%20" + eTitle;
-      msg += "%20site%3Azippyshare.com%20OR%20site%3Asoundowl.com%20OR%20site%3Ahulkshare.com%20OR%20site%3Asoundcloud.com";
+      msg = "Want to get Crimzen's music? Go to this site: http://sleepingawake.bandcamp.com/";
       return API.sendChat(msg);
     };
 
@@ -1303,7 +1304,7 @@
     dieCommand.prototype.init = function() {
       this.command = '/die';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'host';
     };
 
     dieCommand.prototype.functionality = function() {
@@ -1329,7 +1330,7 @@
     reloadCommand.prototype.init = function() {
       this.command = '/reload';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'host';
     };
 
     reloadCommand.prototype.functionality = function() {
@@ -1630,7 +1631,7 @@
 
     uservoiceCommand.prototype.functionality = function() {
       var msg;
-      msg = 'Have an idea for the room, our bot, or an event?  Awesome! Submit it to our uservoice and we\'ll get started on it: http://is.gd/IzP4bA';
+      msg = 'Have an idea for the room, our bot, or an event? Awesome! Submit it to our uservoice and we\'ll get started on it: http://is.gd/IzP4bA';
       msg += ' (please don\'t ask for mod)';
       return API.sendChat(msg);
     };
@@ -2008,7 +2009,7 @@
   beggar = function(chat) {
     var msg, r, responses;
     msg = chat.message.toLowerCase();
-    responses = ["Good idea @{beggar}!  Don't earn your fans or anything thats so yesterday", "Guys @{beggar} asked us to fan him!  Lets all totally do it! *fires off Yukiko's fans*", "srsly @{beggar}? à² _à² ", "@{beggar}.  Earning his fans the good old fashioned way.  Hard work and elbow grease.  A true american."];
+    responses = ["Good idea @{beggar}! Don't earn your fans or anything thats so yesterday", "Guys @{beggar} asked us to fan him! Lets all totally do it! *fires off Yukiko's fans*", "srsly @{beggar}? à² _à² ", "@{beggar}. Earning his fans the good old fashioned way. Hard work and elbow grease. A true american."];
     r = Math.floor(Math.random() * responses.length);
     if (msg.indexOf('fan me') !== -1 || msg.indexOf('fan for fan') !== -1 || msg.indexOf('fan pls') !== -1 || msg.indexOf('fan4fan') !== -1 || msg.indexOf('add me to fan') !== -1) {
       return API.sendChat(responses[r].replace("{beggar}", chat.from));

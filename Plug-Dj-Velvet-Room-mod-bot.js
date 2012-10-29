@@ -853,7 +853,7 @@
 
     punishCommand.prototype.getPunishment = function(username) {
       var p, punishment, punishments;
-      punishments = ["/me summons Mara up @{victim}'s ass", "/me summons Daisoujou and Alice to cast Samsara and Die For Me at @{victim}", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru Kirijo to execute @{victim}", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to cast a Megidolaon at @{victim}", "/me summons Helel and Satan to cast a Armageddon at @{victim}"];
+      punishments = ["/me summons Mara up @{victim}'s ass", "/me summons Daisoujou and Alice to cast Samsara and Die For Me at @{victim}", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru Kirijo to execute @{victim}", "/me allows Chie to deliver a Galatic Punt to @{victim}'s crotch", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to cast a Megidolaon at @{victim}", "/me summons Helel and Satan to cast a Armageddon at @{victim}"];
       p = Math.floor(Math.random() * punishments.length);
       punishment = punishments[p].replace('{victim}', username);
       return punishment;
@@ -867,7 +867,7 @@
         name = msg.substr(8);
         user = r.lookupUser(name);
         if (user === false) {
-          API.sendChat("/me punishes @" + this.msgData.from + " for getting the syntax wrong.");
+          API.sendChat("/me has Izanagi-no-Okami cast Myriad Truths @" + this.msgData.from + " for getting the syntax wrong.");
           return setTimeout(function() {
             return API.sendChat("Seriously though, I don't recognize the username '" + name + "'");
           }, 750);
@@ -1361,7 +1361,7 @@
     };
 
     lockCommand.prototype.functionality = function() {
-      API.sendChat(' gives everyone a Velvet Key');
+      API.sendChat(' summons back all the Velvet Keys');
       return data.lockBooth();
     };
 
@@ -1384,7 +1384,7 @@
     };
 
     unlockCommand.prototype.functionality = function() {
-      API.sendChat(' summons back all the Velvet Keys');
+      API.sendChat(' gives everyone a Velvet Key');
       return data.unlockBooth();
     };
 

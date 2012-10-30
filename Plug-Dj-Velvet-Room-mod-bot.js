@@ -813,7 +813,7 @@
 
     cookieCommand.prototype.getCookie = function() {
       var c, cookies;
-      cookies = ["Sweet Fries. This reminds Akihiko of this childhood!", "a Sugar Cookie. Junpei loves these!", "a Chocolate Truffle. Mitsuru's icy exterior broke down after eating one of these", "a Banana Cupcake. Yukari went, well, bananas over these", "the PENGUIN animal cracker! Kanji's gonna be jealous!", "the Christmas edition of Mystery Food X. It looked and tasted so delicious that it even surprised Naoto", "one of Fuuka's terrible experiments...", "Mystery Food X! *vomits*"];
+      cookies = ["Sweet Fries. This reminds Akihiko of this childhood!", "a Sugar Cookie. Junpei loves these!", "nama-yatsuhashi and konpeito from Kyoto. Ken loves these snacks", "a Chocolate Truffle. Mitsuru's icy exterior broke down after eating one of these", "a Banana Cupcake. Yukari went, well, bananas over these", "the PENGUIN animal cracker! Kanji's gonna be jealous!", "the Christmas edition of Mystery Food X. It looked and tasted so delicious that it even surprised Naoto", "one of Fuuka's terrible experiments...", "Mystery Food X! *vomits*"];
       c = Math.floor(Math.random() * cookies.length);
       return cookies[c];
     };
@@ -828,7 +828,7 @@
           API.sendChat("/em doesn't see '" + msg.substr(8) + "' in room and eats cookie himself");
           return false;
         } else {
-          return API.sendChat("@" + user.username + ", @" + this.msgData.from + " has rewarded you with " + this.getCookie() + ". Enjoy.");
+          return API.sendChat("@" + user.username + ", @" + this.msgData.from + " has rewarded you with " + this.getCookie() + ". Enjoy!");
         }
       }
     };
@@ -853,7 +853,7 @@
 
     punishCommand.prototype.getPunishment = function(username) {
       var p, punishment, punishments;
-      punishments = ["/me summons Mara up @{victim}'s ass", "/me summons Daisoujou and Alice to cast Samsara and Die For Me at @{victim}", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru to execute @{victim}", "/me allows Chie to deliver a Galatic Punt to @{victim}'s crotch", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to cast a Megidolaon at @{victim}", "/me summons Seiryuu to shock @{victim} with Thunder Reign", "/me beckons Suzaku to blow away @{victim} with Panta Rhei", "/me calls upon Genbu to freeze @{victim} with Niflheim", "/me summons Byakko to burn @{victim} to a crisp with Ragnarok", "/me decides to have Kohryu cast Salvation on @{victim} instead", "/me invokes Magatsu Izanagi to smash @{victim} to microbits with Atom Smasher", "/me calls forth Yoshitsune to Slash apart @{victim} with Hassou Tobi", "/me commands Messiah to Strike down @{victim} with God Hand", "/me orders Shiva to Pierce @{victim} multiple times with Pralaya", "/me calls upon Helel and Satan to combine Morning Star and Black Viper to annihilate @{victim} with Armageddon"];
+      punishments = ["/me summons Mara up @{victim}'s ass", "/me summons Daisoujou and Alice to cast Samsara and Die For Me at @{victim}", "/me entreats Jack Frost and Pyro Jack to mock and knock down @{victim} with the Jack Brothers spell", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru to execute @{victim}", "/me allows Chie to deliver a Galatic Punt to @{victim}'s crotch", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to cast a Megidolaon at @{victim}", "/me summons Seiryuu to shock @{victim} with Thunder Reign", "/me beckons Suzaku to blow away @{victim} with Panta Rhei", "/me calls upon Genbu to freeze @{victim} with Niflheim", "/me summons Byakko to burn @{victim} to a crisp with Ragnarok", "/me decides to have Kohryu cast Salvation on @{victim} instead", "/me invokes Magatsu Izanagi to smash @{victim} to microbits with Atom Smasher", "/me calls forth Yoshitsune to Slash apart @{victim} with Hassou Tobi", "/me commands Messiah to Strike down @{victim} with God Hand", "/me orders Shiva to Pierce @{victim} multiple times with Pralaya", "/me calls upon Helel and Satan to combine Morning Star and Black Viper to annihilate @{victim} with Armageddon"];
       p = Math.floor(Math.random() * punishments.length);
       punishment = punishments[p].replace('{victim}', username);
       return punishment;
@@ -869,7 +869,7 @@
         if (user === false) {
           API.sendChat("/me has Izanagi-no-Okami cast Myriad Truths @" + this.msgData.from + " for getting the syntax wrong.");
           return setTimeout(function() {
-            return API.sendChat("Seriously though, I don't recognize the username '" + name + "'");
+            return API.sendChat("Seriously though, I don't LIE about their being a username '" + name + "' here. You get the TRUTH otherwise");
           }, 750);
         } else {
           if (user.owner) {

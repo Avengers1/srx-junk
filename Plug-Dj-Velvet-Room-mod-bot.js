@@ -869,7 +869,7 @@
         if (user === false) {
           API.sendChat("/me has Izanagi-no-Okami cast Myriad Truths @" + this.msgData.from + " for getting the syntax wrong.");
           return setTimeout(function() {
-            return API.sendChat("Seriously though, I don't LIE about their being a username '" + name + "' here. You get the TRUTH otherwise");
+            return API.sendChat("Seriously though, don't LIE about there being a username '" + name + "' here or you will be handed the TRUTH!");
           }, 750);
         } else {
           if (user.owner) {

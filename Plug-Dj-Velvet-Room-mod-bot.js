@@ -853,7 +853,7 @@
 
     punishCommand.prototype.getPunishment = function(username) {
       var p, punishment, punishments;
-      punishments = ["/me summons Mara up @{victim}'s ass", "/me summons Daisoujou and Alice to cast Samsara and Die For Me at @{victim}", "/me entreats Jack Frost and Pyro Jack to mock and knock down @{victim} with the Jack Brothers spell", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru to execute @{victim}", "/me allows Chie to deliver a Galactic Punt to @{victim}'s crotch", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to cast a Megidolaon at @{victim}", "/me summons Seiryuu to shock @{victim} with Thunder Reign", "/me beckons Suzaku to blow away @{victim} with Panta Rhei", "/me calls upon Genbu to freeze @{victim} with Niflheim", "/me summons Byakko to burn @{victim} to a crisp with Ragnarok", "/me decides to have Kohryu cast Salvation on @{victim} instead", "/me invokes Magatsu Izanagi to smash @{victim} to microbits with Atom Smasher", "/me calls forth Yoshitsune to Slash apart @{victim} with Hassou Tobi", "/me commands Messiah to Strike down @{victim} with God Hand", "/me orders Shiva to Pierce @{victim} multiple times with Pralaya", "/me calls upon Helel and Satan to combine Morning Star and Black Viper to annihilate @{victim} with Armageddon"];
+      punishments = ["/me summons Mara up @{victim}'s ass", "/me summons Daisoujou and Alice to cast Samsara and Die For Me at @{victim}", "/me entreats Jack Frost and Pyro Jack to mock and knock down @{victim} with the Jack Brothers spell", "/me summons Vishnu and Ananta to cast Infinity on @{victim} instead", "/me sends the Reaper after @{victim}", "/me forces @{victim} to down a large bowl of Mystery Food X", "/me requests Mitsuru to execute @{victim}", "/me allows Chie to deliver a Galactic Punt to @{victim}'s crotch", "/me calls for an All Out Attack on @{victim}", "/me requests Elizabeth to cast a Megidolaon at @{victim}", "/me summons Seiryuu to shock @{victim} with Thunder Reign", "/me beckons Suzaku to blow away @{victim} with Panta Rhei", "/me calls upon Genbu to freeze @{victim} with Niflheim", "/me summons Byakko to burn @{victim} to a crisp with Ragnarok", "/me decides to have Kohryu cast Salvation on @{victim} instead", "/me invokes Magatsu Izanagi to smash @{victim} to microbits with Atom Smasher", "/me calls forth Yoshitsune to Slash apart @{victim} with Hassou Tobi", "/me commands Messiah to Strike down @{victim} with God Hand", "/me orders Shiva to Pierce @{victim} multiple times with Pralaya", "/me calls upon Helel and Satan to combine Morning Star and Black Viper to annihilate @{victim} with Armageddon"];
       p = Math.floor(Math.random() * punishments.length);
       punishment = punishments[p].replace('{victim}', username);
       return punishment;
@@ -867,9 +867,9 @@
         name = msg.substr(8);
         user = r.lookupUser(name);
         if (user === false) {
-          API.sendChat("/me has Izanagi-no-Okami cast Myriad Truths @" + this.msgData.from + " for getting the syntax wrong.");
+          API.sendChat("/me has Izanagi-no-Okami cast Myriad Truths at @" + this.msgData.from + " for getting the syntax wrong.");
           return setTimeout(function() {
-            return API.sendChat("Seriously though, don't LIE about there being a username '" + name + "' here or you will be handed the TRUTH!");
+            return API.sendChat("Seriously though, don't LIE about there being a username '" + name + "' here because you can't handle the TRUTH!");
           }, 750);
         } else {
           if (user.owner) {
@@ -1067,7 +1067,7 @@
 
     sourceCommand.prototype.functionality = function() {
       var msg;
-    msg = 'Backus from the Dubstep Den wrote me in CoffeeScript and had graciously allowed us to modify and use it. ';
+    msg = 'Backus from the Dubstep Den wrote this bot in CoffeeScript and had graciously allowed us to modify and use it. ';
     msg += 'To support him and find the source code, go to this site: https://github.com/backus/Plug.DJ-Javascript-Chatbot';
       return API.sendChat(msg);
     };

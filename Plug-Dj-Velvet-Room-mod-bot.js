@@ -70,10 +70,14 @@
     settings.prototype.afkTime = 12 * 60 * 1000;
 
     settings.prototype.songIntervalMessages = [
-      {
-        interval: 10,
+       {
+        interval: 7,
         offset: 0,
-        msg: "/em This is your resident Velvet Room Attendant reminding you to come meet our other guests and join our Facebook group: https://www.facebook.com/TheVelvetRoomLobby"
+        msg: "/em: This is your resident Velvet Room Attendant reminding you to come meet our other guests and join our Facebook group: https://www.facebook.com/TheVelvetRoomLobby"
+      }, {
+        interval: 11,
+        offset: 5,
+        msg: "/em: Want to request a song? Please @Mention to the DJ the song and its specific version, and we'll gladly oblige!"
       }
     ];
 

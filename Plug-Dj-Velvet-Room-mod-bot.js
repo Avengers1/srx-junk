@@ -166,7 +166,7 @@
         callback = null;
       }
       return $.ajax({
-        url: "http://www.plug.dj/gateway/room.update_options",
+        url: "http://plug.dj/_/gateway/room.update_options",
         type: 'POST',
         data: JSON.stringify({
           service: "room.update_options",

@@ -73,11 +73,11 @@
       {
         interval: 7,
         offset: 0,
-        msg: "/em: This is your resident Velvet Room Attendant reminding you to come meet our other guests and join our Facebook group: https://www.facebook.com/TheVelvetRoomLobby"
+        msg: "This is your resident Velvet Room Attendant reminding you to come meet our other guests and join our Facebook group: https://www.facebook.com/TheVelvetRoomLobby"
       }, {
         interval: 11,
         offset: 5,
-        msg: "/em: Want to request a specific song? Please @Mention the DJ and we'll gladly oblige!"
+        msg: "Want to request a specific song? Please @Mention the DJ and we'll gladly oblige!"
       }
     ];
 

@@ -705,7 +705,7 @@
 
   })(Command);
 
-  ramenC ramenCommand = (function(_super) {
+ ramenCommand = (function(_super) {
 
     __extends(ramenCommand, _super);
 

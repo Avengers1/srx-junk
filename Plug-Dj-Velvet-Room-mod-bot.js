@@ -838,7 +838,7 @@
     punishCommand.prototype.init = function() {
       this.command = 'punish';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     punishCommand.prototype.getPunishment = function(username) {

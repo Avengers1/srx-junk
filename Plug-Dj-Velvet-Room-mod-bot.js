@@ -71,11 +71,11 @@
 
     settings.prototype.songIntervalMessages = [
       {
-        interval: 10,
+        interval: 7,
         offset: 0,
         msg: "/em: This is your resident Velvet Room Attendant reminding you to come meet our other guests and join our Facebook group: https://www.facebook.com/TheVelvetRoomLobby"
       }, {
-        interval: 15,
+        interval: 11,
         offset: 5,
         msg: "/em: Want to request a specific song? Please @Mention the DJ and we'll gladly oblige!"
       }

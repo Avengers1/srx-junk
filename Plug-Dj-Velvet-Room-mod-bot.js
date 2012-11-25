@@ -1536,7 +1536,7 @@
     forceSkipCommand.prototype.init = function() {
       this.command = '/forceskip';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     forceSkipCommand.prototype.functionality = function() {

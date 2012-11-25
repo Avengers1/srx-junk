@@ -705,7 +705,7 @@
 
   })(Command);
 
-  ramenCommand = (function(_super) {
+  ramenC ramenCommand = (function(_super) {
 
     __extends(ramenCommand, _super);
 
@@ -723,7 +723,7 @@
       var r, ramens;
       ramens = ["a pork and soy sauce bowl from Hagakure Ramen. The collagen will make your skin beautiful", "a steak bowl from Chinese Diner Aiya. You won't leave with an empty stomach", "Hagakure Ramen's signature, Hagakure Bowl. Best bowl of ramen in Iwatodai", "the Rainy Day Mega Beef Bowl Special from Chinese Diner Aiya. You entered the portal to the meat dimension", "the ramen that Yukari burnt and tried to serve Koromaru. Needless to say, you refused it as well", "a tofu bowl that Rise made, but it's so spicy that it feel like a volcano in your mouth", "an omelette Yukiko made, but it's completely tasteless", "Mystery Food X! *vomits*"];
       r = Math.floor(Math.random() * ramens.length);
-      return ramen[r];
+      return ramens[r];
     };
 
     ramenCommand.prototype.functionality = function() {

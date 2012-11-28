@@ -1349,7 +1349,7 @@
     lockCommand.prototype.init = function() {
       this.command = '/lock';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'manager';
     };
 
     lockCommand.prototype.functionality = function() {
@@ -1372,7 +1372,7 @@
     unlockCommand.prototype.init = function() {
       this.command = '/unlock';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'manager';
     };
 
     unlockCommand.prototype.functionality = function() {

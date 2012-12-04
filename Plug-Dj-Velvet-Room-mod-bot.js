@@ -366,7 +366,7 @@
   })();
 
   pupOnline = function() {
-    return API.sendChat("Enter Velvet Room Attendent!");
+    return API.sendChat("Enter Velvet Room Attendant!");
   };
 
   populateUserData = function() {

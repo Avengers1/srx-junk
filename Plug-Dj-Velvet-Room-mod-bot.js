@@ -762,7 +762,7 @@
 
     steakCommand.prototype.randomSteak = function() {
       var r, steaks;
-      steaks = ["some steak croquettes from Souzai Daigoku. Nice and juicy", "a beef steak dinner from Junes. Dry and tough...", "a Fsteak?", "a failed attempt by Chie to make her own steaks. Looks like charcoal", "a Prodigy Platter from Wakatsu Restaurant. Get smarter while you digest", "a Wild-Duck Burger. This is so fattening", "the feast that Shinjiro made for the rest of SEES. You just entered the portal to the delicious dimension", "Mystery Food X! *vomits*"];
+      steaks = ["some steak croquettes from Souzai Daigoku. Nice and juicy", "a beef steak dinner from Junes. Dry and tough...", "a Fsteak? Did Marie make this?", "a failed attempt by Chie to make her own steaks. Looks like charcoal", "a Prodigy Platter from Wakatsu Restaurant. Get smarter while you digest", "a Wild-Duck Burger. This is so fattening", "the feast that Shinjiro made for the rest of SEES. You just entered the portal to the delicious dimension", "Mystery Food X! *vomits*"];
       r = Math.floor(Math.random() * steaks.length);
       return steaks[r];
     };

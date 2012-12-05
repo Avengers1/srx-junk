@@ -501,7 +501,7 @@
     protectCommand.prototype.init = function() {
       this.command = '/protect';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     protectCommand.prototype.functionality = function() {
@@ -1296,7 +1296,7 @@
     dieCommand.prototype.init = function() {
       this.command = '/die';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'manager';
     };
 
     dieCommand.prototype.functionality = function() {
@@ -1395,7 +1395,7 @@
     swapCommand.prototype.init = function() {
       this.command = '/swap';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     swapCommand.prototype.functionality = function() {
@@ -1443,7 +1443,7 @@
     popCommand.prototype.init = function() {
       this.command = '/pop';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     popCommand.prototype.functionality = function() {
@@ -1468,7 +1468,7 @@
     pushCommand.prototype.init = function() {
       this.command = '/push';
       this.parseType = 'startsWith';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     pushCommand.prototype.functionality = function() {

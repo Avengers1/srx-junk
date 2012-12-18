@@ -166,7 +166,7 @@
         callback = null;
       }
       return $.ajax({
-        url: "http://www.plug.dj/gateway/room.update_options",
+        url: "http://www.plug.dj/_/gateway/room.update_options",
         type: 'POST',
         data: JSON.stringify({
           service: "room.update_options",
@@ -194,7 +194,7 @@
         callback = null;
       }
       return $.ajax({
-        url: "http://www.plug.dj/gateway/room.update_options",
+        url: "http://www.plug.dj/_/gateway/room.update_options",
         type: 'POST',
         data: JSON.stringify({
           service: "room.update_options",
@@ -1002,9 +1002,9 @@
 
     rulesCommand.prototype.functionality = function() {
       var msg;
-      msg = "1) Please only play music from Shin Megami Tensei series (Persona, SMT, Raidou Kuzunoha, etc), ";
-      msg += "2) Max song limit 10 minutes. No extended editions, ";
-      msg += "3) Please WOOT on DJ Booth and respect your fellow DJs!, ";
+      msg = "1) The music schedule is Mon-Fri Atlus only, Sat-Sun all VGM and anime music, ";
+      msg += "2) Try to limit songs to less than 10 minutes. No super extended editions, ";
+      msg += "3) Try to WOOT most of the time. Leave MEHs for truly terrible tracks, ";
       msg += "4) Above all, HAVE FUN IN THE VELVET ROOM!!";
       return API.sendChat(msg);
     };
@@ -1105,7 +1105,7 @@
     badQualityCommand.prototype.init = function() {
       this.command = '.128';
       this.parseType = 'exact';
-      return this.rankPrivelege = 'mod';
+      return this.rankPrivelege = 'bouncer';
     };
 
     badQualityCommand.prototype.functionality = function() {

@@ -1003,7 +1003,7 @@
     rulesCommand.prototype.functionality = function() {
       var msg;
       msg = "1) See this pic: http://i45.tinypic.com/eb7a8l.png, ";
-      msg += "2) Try to limit songs to less than 10 minutes. No super extended editions, ";
+      msg += "2) Try to limit songs to less than 10 minutes or 4 repeats. No super extended editions, ";
       msg += "3) Try to WOOT most of the time. Leave MEHs for truly terrible tracks, ";
       msg += "4) Above all, HAVE FUN IN THE VELVET ROOM!!";
       return API.sendChat(msg);

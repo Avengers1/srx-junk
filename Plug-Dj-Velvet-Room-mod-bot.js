@@ -1002,7 +1002,7 @@
 
     rulesCommand.prototype.functionality = function() {
       var msg;
-      msg = "1) The music schedule is Mon-Fri Atlus only, Sat-Sun all VGM and anime music, ";
+      msg = "1) See this pic: http://i45.tinypic.com/eb7a8l.png, ";
       msg += "2) Try to limit songs to less than 10 minutes. No super extended editions, ";
       msg += "3) Try to WOOT most of the time. Leave MEHs for truly terrible tracks, ";
       msg += "4) Above all, HAVE FUN IN THE VELVET ROOM!!";
@@ -1133,13 +1133,8 @@
     };
 
     downloadCommand.prototype.functionality = function() {
-      var e, eAuthor, eTitle, msg;
-      e = encodeURIComponent;
-      eAuthor = e(data.currentsong.author);
-      eTitle = e(data.currentsong.title);
-      msg = "Try this link for HIGH QUALITY DOWNLOAD: http://google.com/#hl=en&q=";
-      msg += eAuthor + "%20-%20" + eTitle;
-      msg += "%20site%3Azippyshare.com%20OR%20site%3Asoundowl.com%20OR%20site%3Ahulkshare.com%20OR%20site%3Asoundcloud.com";
+      var msg;
+      msg = "Want to get Crimzen's music? Just go to this link: http://sleepingawake.bandcamp.com/";
       return API.sendChat(msg);
     };
 

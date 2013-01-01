@@ -1003,7 +1003,7 @@
     rulesCommand.prototype.functionality = function() {
       var msg;
       msg = "1) See this pic: http://i45.tinypic.com/eb7a8l.png, ";
-      msg += "2) Try to limit songs to less than 10 minutes or 4 repeats. No super extended editions, ";
+      msg += "2) No super extended editions. If the track has more than 4 loops or is more than 10 minutes, it will be skipped, ";
       msg += "3) Try to WOOT most of the time. Leave MEHs for truly terrible tracks, ";
       msg += "4) Above all, HAVE FUN IN THE VELVET ROOM!!";
       return API.sendChat(msg);
@@ -1665,7 +1665,7 @@
 
     whyMehCommand.prototype.functionality = function() {
       var msg;
-      msg = "Reserve Mehs for songs that are a) extremely overplayed b) off genre c) absolutely god awful or d) troll songs. ";
+      msg = "Reserve Mehs for songs that are a) off genre b) absolutely god awful or c) troll songs. ";
       msg += "If you simply aren't feeling a song, then remain neutral";
       return API.sendChat(msg);
     };

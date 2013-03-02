@@ -943,10 +943,7 @@
 
     rulesCommand.prototype.functionality = function() {
       var msg;
-      msg = "1) See this pic: http://i45.tinypic.com/eb7a8l.png, ";
-      msg += "2) No super extended editions. If the track has more than 4 loops or is more than 10 minutes, it will be skipped, ";
-      msg += "3) Try to WOOT most of the time. Leave MEHs for truly terrible tracks, ";
-      msg += "4) Above all, HAVE FUN IN THE VELVET ROOM!!";
+      msg = "Read this link for the rules : https://www.facebook.com/TheVelvetRoomLobby/info";
       return API.sendChat(msg);
     };
 
@@ -1857,7 +1854,7 @@
   handleUserJoin = function(user) {
     data.userJoin(user);
     data.users[user.id].updateActivity();
-    return API.sendChat("/em: " + user.username + ", welcome to the Velvet Room!");
+    return API.sendChat("/em: " + user.username + ", welcome to the Velvet Room! Please read the rules here first: https://www.facebook.com/TheVelvetRoomLobby/info");
   };
 
   handleNewSong = function(obj) {
